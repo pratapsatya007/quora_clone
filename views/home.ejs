@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body style="position:relative">
+    <header>
+      <div id="logo"></div>
+      <nav id="nav-bar">
+        <div id="home"></div>
+        <div id="following"></div>
+        <div id="answer"></div>
+        <div id="spaces"></div>
+        <div id="notifications" onclick="render()"></div>
+      </nav>
+      <div id="search">
+        <div id="search-logo" for="search-bar"></div>
+        <input
+          type="search"
+          name="search"
+          id="search-bar"
+          size="30"
+          placeholder="search Quora"
+        />
+      </div>
+      <div id="profile"></div>
+      <div id="languages"></div>
+      <div id="addquestion">
+        <button id="addques-btn" onclick="divopen()">Add question</button>
+      </div>
+      <div></div>
+    </header>
+    <div id="addqu">
+      <div id="wrong" onclick="wrong()" ></div>
+       <div style="display: flex; margin-top: 5px">
+          <div id="addq" onclick="addques()" >Add Question</div>
+          <div id="createp" onclick="Createpost()">Create Post</div>
+       </div>
+       <input
+          type="text"
+          id="start-your-ques"
+          size="45"
+          
+          placeholder="Start your Question With What,How,Why,e.t.c"
+        />
+         <div style="border-top: 2px solid grey; position: absolute; bottom: 0px; right: 2px; padding: 15px; width: 740px;height: 50px;">
+            <button id="cancelbtn" onclick="wrong()">Cancel</button>
+            <button id="addbtn1" >Add Question</button>
+            <div id="img"></div>  
+        </div>
+    </div>
+    <main style="position:relative; background-color: rgb(218, 211, 211);width: 100%;height: 950px;">
+      <section id="sec1">
+        <input type="text" id="askorshare" size="65" placeholder="What do you want to ask or share? 
+        " onclick="divopen()">
+        <div id="Ask" onclick="divopen()"></div>
+        <div id="Ans"></div>
+        <div id="Post" onclick="divopen()"></div>
+      </section>
+      <section id="sec2">
+        <div id="createspace">
+          <div id="plus" onclick="divopen1()"></div>
+          <div id="space" onclick="divopen1()">Create space</div>
+        </div>
+      </section>
+      <div>
+        <div id="addsp1">
+            <div id="wrong" onclick="wrong1()" ></div>
+            <div style=" margin-top: 10px">
+              <div id="createspsec" >Create a Space</div>
+              <div style="font-size: 21px; padding-left: 15px;color: rgb(85, 80, 80);">Share your interests, curate content, host discussions, and more.</div>
+            </div>
+            <label for="namespace" id="nspace">Name</label> <br>
+              <input
+                type="text"
+                id="namespace"
+                size="40"
+              /> <br>
+              <label id="briefdes">Brief description</label> <br>
+              <input
+                type="text"
+                id="namespace1"
+                size="40"
+              />
+              <div style="border-top: 2px solid grey; position: absolute; bottom: 0px; right: 0px;left:0px; padding-top: 10px; width: 725px;height: 50px;">
+                  
+                   <button id="addbtn2" >Create</button>
+                 
+              </div>
+            </div>
+          </div>
+    </div>
+    <section id="post1">
+      <div style="position: relative;width: 600px; height: 250px;; background-color: white
+      ;">
+        <div id="profile1"></div>
+        <div id="username">pratap_satya</div>
+        <div id="follow">Follow</div>
+        <div id="q1">What is the saddest animal on Earth?</div>
+      <div id="ans1">Male Hyenas, Hands down. These guys have got it bad.
+
+        First of all, female Hyenas have a pseudo-penis from which they give birth (By rupturing it), and yes, it hurts. The mortality rate of Hyena Cubs is 60%, not because they are hunted mercilessly by Lions and other opportunistic predators, which they actually are, but because they suffocate on their way out of that narrow organ.
+        
+        </div>
+      </div>
+     <div> <img src="https://qph.cf2.quoracdn.net/main-qimg-ab00c5c9fb185bda1ce56ddb0c8e290c" id="p1"></img></div>
+     <div id="interaction">
+      <div id="insection">
+        <div id="upvote" onclick="upvotefn()"></div>
+        <div id="count" >upvote | 0</div>
+        <div  id="downvote" onclick="downvotefn()"></div>
+       </div>
+       <div id="comments"></div>
+       <div id="share"></div>
+       <div id="threebtn"></div>
+     </div>
+  
+    </section>
+   
+    </main>
+    <script>
+      let addqu=document.getElementById("addqu")
+let addquesbtn=document.getElementById("addques-btn");
+let addq=document.getElementById("addq");
+let startyourques=document.getElementById("start-your-ques")
+let createp=document.getElementById("createp");
+let cancelbtn=document.getElementById("cancelbtn");
+let addbtn1=document.getElementById("addbtn1");
+let addsp1=document.getElementById("addsp1");
+let upvote1=document.getElementById("upvote");
+let downvote=document.getElementById("downvote")
+let count=document.getElementById("count");
+let home=document.getElementById("home");
+let notifications=document.getElementById("notifications")
+function divopen(){
+    addqu.style.display="inline";
+    addsp1.style.display="none";
+}
+function wrong(){
+    addqu.style.display="none";
+}
+function wrong1(){
+    addsp1.style.display="none";
+}
+function Createpost(){
+    addq.style.border="none";
+    createp.style.borderBottom=' 3px solid blue';
+    startyourques.placeholder="Say something..........."
+    cancelbtn.style.display="none";
+    addbtn1.innerText="Post"
+
+}
+function addques(){
+    createp.style.border="none";
+    addq.style.borderBottom=' 3px solid blue';
+    startyourques.placeholder="Start your Question With What,How,Why,e.t.c"
+    cancelbtn.style.display="inline";
+    addbtn1.innerText="Add Question"
+
+}
+function divopen1(){
+    addsp1.style.display="inline";
+    addqu.style.display="none";
+}
+function upvotefn(){
+  upvote1.style.backgroundColor="blue"
+  count.innerText="upvote | 1"
+  downvote.style.backgroundColor="white"
+}
+function downvotefn(){
+  upvote1.style.backgroundColor="white"
+  count.innerText="upvote | 0"
+  downvote.style.backgroundColor="blue"
+}
+function render(){
+  window.location.href="/notifications"
+  
+}
+    </script>
+  </body>
+</html>

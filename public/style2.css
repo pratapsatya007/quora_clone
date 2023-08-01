@@ -1,0 +1,77 @@
+* {
+  /* removing default css properties*/
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  border: none;
+  font: inherit;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  width: 100%;
+  height: 757px;
+  background-image: url("https://qph.cf2.quoracdn.net/main-qimg-b5faebde65208b4e09af0a85b3893ddd-lq");
+  background-size: cover;
+  position: relative;
+}
+#login-sheet {
+  width: 750px;
+  height: 390px;
+  background-color: white;
+  padding: 10px 20px;
+  position: relative;
+  position: absolute;
+  top: 150px;
+  left: 400px;
+  box-shadow: 2px 2px 2px white;
+}
+#signup-sheet {
+  width: 750px;
+  height: 460px;
+  background-color: white;
+  padding: 10px 20px;
+  position: relative;
+  position: absolute;
+  top: 140px;
+  left: 400px;
+  box-shadow: 2px 2px 2px white;
+}
+#img {
+  width: 200px;
+  height: 100px;
+  background-image: url("./quora5914.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 20px;
+  left: 235px;
+}
+.input {
+  border: 1px solid rgb(180, 177, 177);
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 8px;
+}
+
+form > label {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+#login-btn {
+  width: 85px;
+  height: 35px;
+  padding: 2px;
+  background-color: rgb(17, 17, 125);
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+#register-btn {
+  text-decoration: none;
+  color: rgb(69, 68, 68);
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 16px;
+}

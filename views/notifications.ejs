@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo"></div>
+      <nav id="nav-bar">
+        <div id="home" onclick="goback()"></div>
+        <div id="following"></div>
+        <div id="answer"></div>
+        <div id="spaces"></div>
+        <div id="notifications"></div>
+      </nav>
+      <div id="search">
+        <div id="search-logo" for="search-bar"></div>
+        <input
+          type="search"
+          name="search"
+          id="search-bar"
+          size="30"
+          placeholder="search Quora"
+        />
+      </div>
+      <div id="profile"></div>
+      <div id="languages"></div>
+      <div id="addquestion">
+        <button id="addques-btn" onclick="divopen()">Add question</button>
+      </div>
+    </header>
+    <div id="addqu">
+      <div id="wrong" onclick="wrong()"></div>
+      <div style="display: flex; margin-top: 5px">
+        <div id="addq" onclick="addques()">Add Question</div>
+        <div id="createp" onclick="Createpost()">Create Post</div>
+      </div>
+      <input
+        type="text"
+        id="start-your-ques"
+        size="45"
+        placeholder="Start your Question With What,How,Why,e.t.c"
+      />
+      <div
+        style="
+          border-top: 2px solid grey;
+          position: absolute;
+          bottom: 0px;
+          right: 2px;
+          padding: 15px;
+          width: 740px;
+          height: 50px;
+        "
+      >
+        <button id="cancelbtn" onclick="wrong()">Cancel</button>
+        <button id="addbtn1">Add Question</button>
+        <div id="img"></div>
+      </div>
+    </div>
+    <main>
+      <section id="sec3">
+        <div id="filter">Filter</div>
+        <div id="filterspace">
+          <div
+            class="filter1"
+            style="
+              background-color: rgb(234, 176, 176);
+              color: rgb(207, 60, 60);
+              font-weight: 700;
+            "
+            id="st"
+            onclick="click4()"
+          >
+            Stories
+          </div>
+          <div class="filter1" id="q" onclick="click5()">Questions</div>
+          <div class="filter1" id="s" onclick="click1()">Spaces</div>
+          <div class="filter1" id="c" onclick="click2()">Your content</div>
+          <div class="filter1" id="p" onclick="click3()">Your profile</div>
+        </div>
+      </section>
+      <section id="sec4">
+        <div id="notify">Stories</div>
+        <div id="notify-img"></div>
+      </section>
+    </main>
+    <script>
+      let st = document.getElementById("st");
+      let q = document.getElementById("q");
+      let s = document.getElementById("s");
+      let c = document.getElementById("c");
+      let p = document.getElementById("p");
+      let home = document.getElementById("home");
+      let notifications = document.getElementById("notifications");
+      notifications.style.borderBottom = "2px solid rgb(167, 16, 16)";
+      home.style.borderBottom = "none";
+      function goback() {
+        window.location.href = "/home";
+      }
+      function click5() {
+        q.style.backgroundColor = "rgb(234, 176, 176)";
+        q.style.color = "rgb(207, 60, 60)";
+        q.style.fontWeight = "700";
+        st.style.backgroundColor = "white";
+        st.style.color = " rgb(55, 51, 51)";
+        s.style.backgroundColor = "white";
+        s.style.color = " rgb(55, 51, 51)";
+        c.style.backgroundColor = "white";
+        c.style.color = " rgb(55, 51, 51)";
+        p.style.backgroundColor = "white";
+        p.style.color = " rgb(55, 51, 51)";
+      }
+      function click1() {
+        q.style.backgroundColor = "white";
+        q.style.color = "rgb(55, 51, 51)";
+        st.style.backgroundColor = "white";
+        st.style.color = " rgb(55, 51, 51)";
+        s.style.backgroundColor = "rgb(234, 176, 176)";
+        s.style.color = " rgb(207, 60, 60)";
+        s.style.fontWeight = "700";
+        c.style.backgroundColor = "white";
+        c.style.color = " rgb(55, 51, 51)";
+        p.style.backgroundColor = "white";
+        p.style.color = " rgb(55, 51, 51)";
+      }
+      function click2() {
+        q.style.backgroundColor = "white";
+        q.style.color = "rgb(55, 51, 51)";
+        st.style.backgroundColor = "white";
+        st.style.color = " rgb(55, 51, 51)";
+        s.style.backgroundColor = "white";
+        s.style.color = " rgb(55, 51, 51)";
+        c.style.backgroundColor = "rgb(234, 176, 176)";
+        c.style.color = " rgb(207, 60, 60)";
+        c.style.fontWeight = "700";
+        p.style.backgroundColor = "white";
+        p.style.color = " rgb(55, 51, 51)";
+      }
+      function click3() {
+        q.style.backgroundColor = "white";
+        q.style.color = "rgb(55, 51, 51)";
+        st.style.backgroundColor = "white";
+        st.style.color = " rgb(55, 51, 51)";
+        s.style.backgroundColor = "white";
+        s.style.color = " rgb(55, 51, 51)";
+        c.style.backgroundColor = "white";
+        c.style.color = " rgb(55, 51, 51)";
+        p.style.backgroundColor = "rgb(234, 176, 176)";
+        p.style.color = " rgb(207, 60, 60)";
+        p.style.fontWeight = "700";
+      }
+      function click4() {
+        q.style.backgroundColor = "white";
+        q.style.color = "rgb(55, 51, 51)";
+        st.style.backgroundColor = "rgb(234, 176, 176)";
+        st.style.color = "rgb(207, 60, 60)";
+        st.style.fontWeight = "700";
+        s.style.backgroundColor = "white";
+        s.style.color = " rgb(55, 51, 51)";
+        c.style.backgroundColor = "white";
+        c.style.color = " rgb(55, 51, 51)";
+        p.style.backgroundColor = "white";
+        p.style.color = "rgb(55, 51, 51) ";
+      }
+    </script>
+  </body>
+</html>
