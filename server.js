@@ -10,7 +10,6 @@ const ejs = require("ejs");
 
 //require router routes
 const authRoute = require("./routes/auth");
-const homeRoute = require("./routes/home");
 
 //setupp application
 const app = express();
@@ -100,7 +99,6 @@ app.get("/imgf.png", (req, res) => {
 
 //use auth routes
 app.use("/", authRoute);
-app.use("/", homeRoute);
 app.listen(process.env.PORT, () => {
   console.log("server on port", process.env.PORT);
 });
